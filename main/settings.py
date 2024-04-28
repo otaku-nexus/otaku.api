@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     "rest_framework",
     "authentication",
     "anime",
-    "threads"
+    "threads",
+    'drf_yasg',
 ]
 
 REST_FRAMEWORK = {
