@@ -33,7 +33,7 @@ class Profile(AbstractBaseUser, PermissionsMixin):
     is_superuser = models.BooleanField(default=False)
     
     email = models.EmailField(unique=True, primary_key=True)
-    username = models.CharField(max_length=40, unique=True)
+    username = models.CharField(max_length=15, unique=True)
     profile_picture = models.ImageField(upload_to='profile_pictures', default='profile_pictures/default.jpg')
     date_joined = models.DateTimeField(default=timezone.now)
     about_me = models.TextField(null=True, blank=True)  
