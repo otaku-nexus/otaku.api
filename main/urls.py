@@ -42,4 +42,5 @@ urlpatterns = [
     path("auth/", include("authentication.api.urls")),
     # path("anime/", include("anime.api..urls")),
     path("threads/", include("threads.api.urls")),
+    path("gen/", include("genai.api.urls")),
 ]
