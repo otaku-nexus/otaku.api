@@ -5,7 +5,7 @@ from django.utils import timezone
 class Anime(models.Model):
     title = models.CharField(max_length=100)
     synopsis = models.TextField()
-    mal_id = models.IntegerField(unique=True)
+    mal_id = models.IntegerField(unique=True, null=False, blank=False)
     type = models.ForeignKey('AnimeType', on_delete=models.CASCADE)
     episode_count = models.IntegerField()
     image = models.ImageField(upload_to='anime_pictures', default='anime_pictures/default.jpg')
